@@ -16,9 +16,8 @@
     document.getElementById("run").addEventListener("click", function() {
 
         //The .map function in this case goes over every element (represented by the x and converts it to an integer).
-        //the  '>+x' is a short way of writing Number(x)
         //the final result is an array of numbers.
-        var numbers = document.getElementById("numbers").value.split(', ').map(x=>+x); 
+        var numbers = document.getElementById("numbers").value.split(', ').map(nr => parseInt(nr)); 
 
         //By default sort will sort alphabetically rather then by the actual numeric value.
         //So we need to add a function by parameter that sorts numerically.
