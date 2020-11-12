@@ -14,14 +14,15 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-        var maxSquareNr = 21;
-        var squareNrs = [];
+        const maxSquareNr = 21;
+        let squareNrs = [];
+        let i = 1;
 
-        var i = 1;
-        while(i*i < maxSquareNr){
+        while(i*i < maxSquareNr) {
             squareNrs.push(Math.pow(i,2));
             i++;
         }
+
         alert(`The number of square nr's between 1 and 21 are: ${squareNrs.join(' ')}.`)
 
 

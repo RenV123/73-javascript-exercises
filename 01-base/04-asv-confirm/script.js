@@ -11,11 +11,11 @@
 
 (function() {
 
-    var userConfirmed = false;
+    let userConfirmed = false;
     do {
-        var age = prompt("What is your Age?");
-        var gender = prompt("What is your Gender?");
-        var town = prompt("In which town do you live?");
+        let age = prompt("What is your Age?");
+        let gender = prompt("What is your Gender?");
+        let town = prompt("In which town do you live?");
 
         userConfirmed = confirm(`You are a ${age} old ${gender} living in the town ${town}?`);
     } while(!userConfirmed)

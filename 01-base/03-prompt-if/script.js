@@ -11,9 +11,9 @@
 
 (function() {
 
-  var userWantsCake = confirm("Do you want some chocolate cake?");
+  let userWantsCake = confirm("Do you want some chocolate cake?");
 
-  if(userWantsCake === true)
+  if(userWantsCake)
   {
     alert('Hooray cake for everybody !!!');
   }

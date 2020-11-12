@@ -13,12 +13,12 @@
 The idea is that to validate if the string is a color we basically
 set the color of a style object. If it's a valid color the style's color member will be set.
 Otherwise the string will be empty.*/
+
 const isColor = (strColor) => {
     const s = new Option().style;
     s.color = strColor;
     return s.color !== '';
-  }
-  
+}
 
 (function() {
 
@@ -27,8 +27,7 @@ const isColor = (strColor) => {
         //get color
         let color = document.getElementById("color").value;
 
-        if(isColor(color))
-        {
+        if(isColor(color)) {
             document.body.style.backgroundColor = color;
         }
         else {

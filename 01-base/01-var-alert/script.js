@@ -10,6 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-    var message = "Hello, World!";
+
+    let message = "Hello, World!";
     alert(message);
+    
 })();

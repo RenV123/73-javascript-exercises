@@ -11,15 +11,20 @@
 
 (function() {
 
-    const setBackground = () => {
+    const generateRandomColor = () => {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
-        document.body.style.backgroundColor = "#" + randomColor;
+        return `#${randomColor}`;
     }
-  
+
+    const setBackground = color => {
+        
+        document.body.style.backgroundColor = "#" + color;
+    }
 
     // your code here
     document.getElementById("run").addEventListener("click", (event) => { 
-        setBackground();
+        let randomColor = generateRandomColor();
+        setBackground(randomColor);
     });
 
 })();

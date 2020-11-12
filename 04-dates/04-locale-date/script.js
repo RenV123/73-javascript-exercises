@@ -14,7 +14,7 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    var currentDate = new Date();
+    let currentDate = new Date();
 
     //reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
     const options = 

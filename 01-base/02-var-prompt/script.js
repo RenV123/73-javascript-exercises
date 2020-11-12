@@ -12,6 +12,6 @@
 (function() {
 
     // your code here
-    var userName = prompt("What is your name?");
+    let userName = prompt("What is your name?");
     alert(`Hello, ${userName} !`);
 })();
