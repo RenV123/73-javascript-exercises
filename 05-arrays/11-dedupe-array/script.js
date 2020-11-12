@@ -9,25 +9,42 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  const fruits = [
+    'cerise',
+    'durian',
+    'pomme',
+    'poire',
+    'fraise',
+    'tomate',
+    'orange',
+    'mandarine',
+    'fraise',
+    'durian',
+    'pêche',
+    'cerise',
+    'raisin',
+    'cerise',
+  ];
 
-    const fruits = [
-        "cerise",
-        "durian",
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "fraise",
-        "durian",
-        "pêche",
-        "cerise",
-        "raisin",
-        "cerise",
-    ];
+  document.getElementById('run').addEventListener('click', () => {
+    /*
+     * This creates an array (the outher square brackets) []
+     * adds the contents of a Set (new Set) using the spread operator (...)
+     * the Set is constructed of the contents of an array.
+     * The reason this works is because Set is a collection where the values can occur only once.
+     */
+    //console.log([...new Set(fruits)]);
 
-    // your code here
+    /* My own attempt using the reducer and includes functions seen in the last exercises.*/
 
+    const reducer = (accumulator, fruit) => {
+      if (!accumulator.includes(fruit)) {
+        accumulator.push(fruit);
+      }
+      return accumulator;
+    };
+
+    console.log(fruits.reduce(reducer, []));
+  });
 })();
