@@ -19,12 +19,14 @@
      * The map function has as parameter a callback ( a type of function)
      * This callback has as arguments the currentValue, index, array, thisArg
      * We don't need arg currentValue so it's replaced with an underscore
+     * (this is a convention to let people know the argument is unused.)
      * The callback returns an array with two elements (a key and value)
      * This is stored inside the map.
      * Using the fromEntries function we convert this map with arrays to an object.
+     * Note: this only works as long every key has a matching value.
      * See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
      */
-    console.log(Object.fromEntries(keys.map((_, i) => [keys[i], values[i]])));
+    //console.log(Object.fromEntries(keys.map((_, i) => [keys[i], values[i]])));
 
     //Same as above but more readable:
     /*
@@ -36,5 +38,15 @@
     let object = Object.fromEntries(map);
     console.log(object);
     */
+
+    // A different solution using a reducer.
+    var obj = Object.fromEntries(
+      keys.reduce((accumulator, key, index) => {
+        accumulator.set(key, values[index]);
+        return accumulator;
+      }, new Map())
+    );
+
+    console.log(obj);
   });
 })();
