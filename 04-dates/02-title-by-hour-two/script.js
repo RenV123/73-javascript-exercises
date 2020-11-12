@@ -14,9 +14,9 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    var date = new Date();
-    var currentHour = date.getHours();
-    var currentMinutes = date.getMinutes();
+    let date = new Date();
+    let currentHour = date.getHours();
+    let currentMinutes = date.getMinutes();
 
     //if the currenthour is less than 17 or it's 17 and it's less than 30 minutes... 
     if( (currentHour < 17) || 

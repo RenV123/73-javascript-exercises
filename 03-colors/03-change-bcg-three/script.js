@@ -18,7 +18,7 @@
 
     const setBackground = color => {
         
-        document.body.style.backgroundColor = "#" + color;
+        document.body.style.backgroundColor =  color;
     }
 
     // your code here

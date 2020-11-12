@@ -15,7 +15,6 @@
     "July", "August", "September", "October", "November", "December"
     ];
 
-    // your code here
     document.getElementById("run").addEventListener("click", function() {
         
         //null will make it so the date starts from januari the first 1970
