@@ -46,18 +46,8 @@ function getRandomInt(min, max) {
     'sported',
   ]);
 
-  /*
-        When you click the button display in the given tag a random name of
-        bird with a random adjective based on the data provided in the
-        script.<br />
-        Each name is associated to a number that tells you how to decline
-        it. If you see "1" you have to add "A" in front of the bird's
-        adjective and name (example: "<em>A</em> tall robin"). If the number
-        is higher than "1", you have to add "A few" in front of the name,
-        and an "s" at the end (example: "<em>A few</em> perched
-        pigeon<em>s</em>").
-    */
   document.getElementById('run').addEventListener('click', () => {
+    // get random bird from array.
     let bird = birds[getRandomInt(0, birds.length - 1)];
 
     //Using the spread operator put the set in an array and use the same approach to get a random element

@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  var rene = {
+    firstname: 'René',
+    lastname: 'Vandamme',
+    age: '27',
+    city: 'Ghent',
+    country: 'Belgium',
+  };
+
+  console.log(rene);
 })();
