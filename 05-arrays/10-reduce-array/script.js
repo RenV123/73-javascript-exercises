@@ -93,6 +93,7 @@
 
     /*
         The Reducer explained:
+        * Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
         * Is called for every element in the array
         * the accumulator the first time will be either the first element or in this case the initialSum.
         * the next time the accumulator will be the result of the reducer (0 + person.age)
