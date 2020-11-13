@@ -12,8 +12,9 @@
 /*It seems the js Math.random function only provides you with random floats between 0 - 1, 
 so we have to create our own function to scale them and convert them to integer nrs.*/
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  // We multiply the random nr by the max - min and add at least one to make sure we do not multiply by 0
+  // (in case min and max are very close).
+  // By adding + 1 we make sure the random value is always at least the minimum
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
