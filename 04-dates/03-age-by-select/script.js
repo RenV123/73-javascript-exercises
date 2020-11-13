@@ -9,23 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  document.getElementById('run').addEventListener('click', function () {
+    var day = document.getElementById('dob-day').value;
+    var month = document.getElementById('dob-month').value;
+    var year = document.getElementById('dob-year').value;
+    //let visitorBirthDate = new Date(year, month, day);
+    let visitorBirthDate = new Date(year, month - 1, day);
 
+    console.log(visitorBirthDate.toString());
 
-    document.getElementById("run").addEventListener("click", function() {
+    //new date is today
+    let differenceInYears =
+      new Date().getFullYear() - visitorBirthDate.getFullYear();
 
-        let visitorBirthDate = new Date();
-        let currentDate = new Date(); //A new date is always today.
-    
-        visitorBirthDate.setDate(document.getElementById("dob-day").value);
-        //In javascript months start from 0 (which would make sense except days don't start from 0 ??).
-        visitorBirthDate.setMonth(Number(document.getElementById("dob-month").value) - 1); 
-        visitorBirthDate.setFullYear(document.getElementById("dob-year").value);
-
-        let differenceInYears = currentDate.getFullYear() - visitorBirthDate.getFullYear();
-        alert(`You are ${differenceInYears} old.`);
-        
-    });
-
-
+    alert(`You are ${differenceInYears} old.`);
+  });
 })();
