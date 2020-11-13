@@ -17,6 +17,7 @@
 
     // Be carefull with the month in new Date:
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
+    // It all makes sense now: https://stackoverflow.com/a/41992352
     let visitorBirthDate = new Date(year, month - 1, day);
 
     console.log(visitorBirthDate.toString());
