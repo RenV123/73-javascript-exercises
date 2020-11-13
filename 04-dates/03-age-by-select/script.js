@@ -14,7 +14,9 @@
     var day = document.getElementById('dob-day').value;
     var month = document.getElementById('dob-month').value;
     var year = document.getElementById('dob-year').value;
-    //let visitorBirthDate = new Date(year, month, day);
+
+    // Be carefull with the month in new Date:
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
     let visitorBirthDate = new Date(year, month - 1, day);
 
     console.log(visitorBirthDate.toString());
