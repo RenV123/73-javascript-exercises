@@ -9,40 +9,39 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  const fruits = [
+    'apple',
+    'perry',
+    'strawberry',
+    'tomato',
+    'kiwi',
+    'banana',
+    'orange',
+    'mandarin',
+    'durian',
+    'peach',
+    'grapes',
+    'cherry',
+  ];
 
-    const fruits = [
-        "apple",
-        "perry",
-        "strawberry",
-        "tomato",
-        "kiwi",
-        "banana",
-        "orange",
-        "mandarin",
-        "durian",
-        "peach",
-        "grapes",
-        "cherry",
-    ];
+  /*<p>When you click the button, log in the console if, yes or no, there is an <em>apple</em> in the array <strong>fruits</strong>.</p>*/
 
-    /*<p>When you click the button, log in the console if, yes or no, there is an <em>apple</em> in the array <strong>fruits</strong>.</p>*/
-
-    document.getElementById("run").addEventListener("click", ()=> {
-        
-
-        /*if(fruits.find(fruit => fruit == "apple") == undefined) {
+  document.getElementById('run').addEventListener('click', () => {
+    // The find function actually returns an element if it's in the array. If it is not it will be undefined.
+    /*if(fruits.find(fruit => fruit == "apple") == undefined) {
             console.log("There's an apple.")
         }
         else {
             console.log("There's no apple.");
         }*/
 
-        /*Same as above but shorter*/
-        /*fruits.find(fruit => fruit == "apple") !== undefined ? console.log("There's an apple.") : console.log("There's no apple.");*/
+    /*Same as above but shorter*/
+    /*fruits.find(fruit => fruit == "apple") !== undefined ? console.log("There's an apple.") : console.log("There's no apple.");*/
 
-        //Looking at the title of the exercise, this is probably the required solution:
-        fruits.includes('apple') ? console.log("There's an apple.") : console.log("There's no apple.");
-    });
-
+    //Looking at the title of the exercise, this is probably the required solution:
+    fruits.includes('apple')
+      ? console.log("There's an apple.")
+      : console.log("There's no apple.");
+  });
 })();

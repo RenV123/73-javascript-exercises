@@ -9,29 +9,26 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  var fruits = [
+    'pomme',
+    'poire',
+    'fraise',
+    'tomate',
+    'orange',
+    'mandarine',
+    'durian',
+    'pêche',
+    'raisin',
+    'cerise',
+  ];
 
-    var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ];
+  document.getElementById('run').addEventListener('click', () => {
+    fruits.shift(); //remove the first element.
+    fruits.pop(); //remove the last element.
+    fruits.unshift('banana'); //add an element to the start of the array.
+    fruits.push('kiwi'); //Add an element to the end of the array.
 
-    document.getElementById("run").addEventListener("click", ()=> {
-
-        fruits.shift(); //remove the first element.
-        fruits.pop(); //remove the last element.
-        fruits.unshift("banana"); //add an element to the start.
-        fruits.push("kiwi");
-        
-        console.log(fruits);
-    });
-
+    console.log(fruits);
+  });
 })();

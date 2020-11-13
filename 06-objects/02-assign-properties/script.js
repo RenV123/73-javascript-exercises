@@ -29,7 +29,9 @@
 
   document.getElementById('run').addEventListener('click', () => {
     for (let i = 0; i < computers.length; i++) {
-      //When spread adds the contents to a new object.
+      //Spread adds the contents  of an object to a new object. So in this case.
+      //It will add all the items of defaultProps to a new object
+      //and than it adds the contents of an element of the computers array.
       //When adding multiple items using spread the right one overwrites the left one
       computers[i] = { ...defaultProps, ...computers[i] };
     }

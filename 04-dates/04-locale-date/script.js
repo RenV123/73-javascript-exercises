@@ -9,24 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+  // your code here
+  let currentDate = new Date();
 
-    // your code here
-    let currentDate = new Date();
-
-    //reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-    const options = 
-    { 
-        weekday: 'long',
-        day: "numeric", 
-        month: "long", 
-        year: "numeric",
-        hour: 'numeric', 
-        minute: 'numeric' ,
-        hour12: false 
-    }
-    document.getElementById("target").innerHTML = new Intl.DateTimeFormat('en-GB', options).format(currentDate);
-
+  //reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+  const options = {
+    weekday: 'long', //long means written in full.
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false, //Otherwise it will use AM/PM
+  };
+  document.getElementById('target').innerHTML = new Intl.DateTimeFormat(
+    'en-GB',
+    options
+  ).format(currentDate);
 })();
