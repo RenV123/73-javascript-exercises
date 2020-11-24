@@ -14,13 +14,17 @@
   let targetElement = document.getElementById('target');
   let table = document.createElement('table');
 
-  //Create the rest of the columns
+  //Create a table Head
   let tableHead = table.createTHead();
+
   for (let i = 1; i <= 10; i++) {
+    //Create a row
     let row = tableHead.insertRow();
     for (let j = 1; j <= 10; j++) {
+      //Create a column
       let cell = row.insertCell();
       if (i === 1 || j === 1) {
+        //make the first row and column bold
         cell.innerHTML = `<b>${i * j}</b>`;
       } else {
         cell.innerHTML = i * j;
