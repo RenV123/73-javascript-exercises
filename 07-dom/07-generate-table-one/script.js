@@ -9,8 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  let targetElement = document.getElementById('target');
+  let table = document.createElement('table');
+  let tableHead = table.createTHead();
+  tableHead.innerHTML = 'My Header';
+  for (let i = 0; i < 10; i++) {
+    let row = tableHead.insertRow();
+    row.innerHTML = 'My Row';
+  }
+  targetElement.appendChild(table);
 })();
