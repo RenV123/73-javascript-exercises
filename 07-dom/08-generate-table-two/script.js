@@ -16,16 +16,12 @@
 
   //Create the rest of the columns
   let tableHead = table.createTHead();
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 1; i <= 10; i++) {
     let row = tableHead.insertRow();
-    for (let j = 0; j <= 10; j++) {
+    for (let j = 1; j <= 10; j++) {
       let cell = row.insertCell();
-      if (i === 0) {
-        if (j != 0) {
-          cell.innerHTML = `<b>${j}</b>`;
-        }
-      } else if (j === 0) {
-        cell.innerHTML = `<b>${i}</b>`;
+      if (i === 1 || j === 1) {
+        cell.innerHTML = `<b>${i * j}</b>`;
       } else {
         cell.innerHTML = i * j;
       }
