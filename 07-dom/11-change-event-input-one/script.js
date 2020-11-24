@@ -9,8 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  let passwordOne = document.getElementById('pass-one');
+  let counter = document.getElementById('counter');
+  passwordOne.addEventListener('input', () => {
+    let passwordLength = passwordOne.value.length;
+    if (passwordLength > 10) {
+      let newPassword = passwordOne.value.substring(0, 10);
+      passwordOne.value = newPassword;
+    }
+    counter.innerHTML = `${passwordOne.value.length}/10`;
+  });
 })();

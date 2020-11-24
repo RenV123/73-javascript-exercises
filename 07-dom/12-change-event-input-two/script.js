@@ -9,8 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  let passwordOne = document.getElementById('pass-one');
+  let validity = document.getElementById('validity');
+  passwordOne.addEventListener('input', () => {
+    const password = passwordOne.value;
+    let passwordLength = passwordOne.value.length;
 
-    // your code here
+    let nrsInPassword = 0;
+    for (let char in password) {
+      if (!isNaN(char)) {
+        nrsInPassword++;
+      }
+    }
 
+    if (passwordLength >= 8 && nrsInPassword >= 2) {
+      validity.innerHTML = 'ok';
+    } else {
+      validity.innerHTML = 'Not ok';
+    }
+  });
 })();
