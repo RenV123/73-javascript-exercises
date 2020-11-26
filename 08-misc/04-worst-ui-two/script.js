@@ -9,8 +9,31 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  //const dataHover = imageElement.dataset.hover;
+  Array.from(document.querySelectorAll('.actions > button')).forEach((btn) => {
+    btn.addEventListener('click', () => {
+      let minValue = Number(btn.dataset.min);
+      let maxValue = Number(btn.dataset.max);
+      let value = Number(btn.textContent);
+      if (value < maxValue) {
+        value++;
+      } else {
+        value = minValue;
+      }
+      btn.textContent = value > 9 ? value : `0${value}`;
+      updatePhoneNr();
+    });
+  });
 
-    // your code here
-
+  const updatePhoneNr = () => {
+    let phoneNrText = '0';
+    Array.from(document.querySelectorAll('.actions > button')).forEach(
+      (btn) => {
+        phoneNrText += btn.textContent;
+      }
+    );
+    document.getElementById('target').textContent = phoneNrText;
+  };
 })();
