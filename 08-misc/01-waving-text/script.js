@@ -9,8 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  let target = document.getElementById('target');
+  const nrOfSizes = 30;
+  let i = 0;
+  setInterval(() => {
+    let sine = Math.abs(Math.sin(i / nrOfSizes));
+    console.log(sine);
+    target.style.fontSize = `${sine * 1.5}rem`;
+    i++;
+  }, 50);
 })();
