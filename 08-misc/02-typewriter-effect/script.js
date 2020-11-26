@@ -9,8 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  let target = document.getElementById('target');
+  var fullText = document.getElementById('target').textContent;
+  let i = 1;
+  const maxTimeout = 200;
+  /**
+   * A recursive function is a function that calls it self.
+   */
+  const typeNextLetterRecursive = () => {
+    if (i <= fullText.length) {
+      target.textContent = fullText.slice(0, i);
+      i++;
+      var rand = Math.round(Math.random() * maxTimeout);
+      setTimeout(typeNextLetterRecursive, rand);
+    }
+  };
 
-    // your code here
-
+  //Call it randomly the first time
+  typeNextLetterRecursive();
 })();
