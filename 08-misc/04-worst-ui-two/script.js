@@ -10,8 +10,6 @@
 // You will have time to focus on it later.
 
 (function () {
-  // your code here
-  //const dataHover = imageElement.dataset.hover;
   Array.from(document.querySelectorAll('.actions > button')).forEach((btn) => {
     btn.addEventListener('click', () => {
       let minValue = Number(btn.dataset.min);
