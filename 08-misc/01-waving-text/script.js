@@ -11,12 +11,23 @@
 
 (function () {
   let target = document.getElementById('target');
-  const nrOfSizes = 30;
-  let i = 0;
+  let targetValue = document.getElementById('target').textContent;
+
+  const calculateFontSize = (i, range) => {
+    //Math.sin calculates sin based on the radials entered. sin(PI/2) == 1
+    //Abs makes sure i's always positive
+    // Ceil to round up.
+    return Math.round(Math.abs(Math.sin((i / range) * (Math.PI / 2)) * range));
+  };
+
+  let offset = 0;
   setInterval(() => {
-    let sine = Math.abs(Math.sin(i / nrOfSizes));
-    console.log(sine);
-    target.style.fontSize = `${sine * 1.5}rem`;
-    i++;
+    let letters = targetValue.split('');
+    for (let i = 0; i < letters.length; i++) {
+      let size = calculateFontSize(i + offset, 6);
+      letters[i] = letters[i].fontsize(size);
+    }
+    offset += 1;
+    document.getElementById('target').innerHTML = letters.join('');
   }, 50);
 })();
