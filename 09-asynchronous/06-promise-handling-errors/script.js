@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById('run').addEventListener('click', () => {
+    //see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject
+    window.lib.getPersons().then(displayPersons, displayError);
+  });
+
+  /**
+   * Displays a list of persons in the console.
+   * @param {String} error An error message.
+   * @param {*} posts A list of posts.
+   */
+  const displayPersons = (persons) => {
+    persons.forEach((person) => {
+      console.log(person);
+    });
+  };
+
+  const displayError = (error) => {
+    console.error(error);
+  };
 })();
