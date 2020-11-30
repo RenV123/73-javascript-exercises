@@ -9,6 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
+(async () => {
+  const displayPersons = async () => {
+    try {
+      let persons = await window.lib.getPersons();
+      console.log(persons);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  document.getElementById('run').addEventListener('click', displayPersons);
 })();
