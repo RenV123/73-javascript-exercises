@@ -9,6 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
+(async () => {
+  let posts = await window.lib.getPosts();
+  for (let i = 0; i < posts.length; i++) {
+    let comments = await window.lib.getComments(posts[i].id);
+    posts[i].comments = comments;
+  }
+
+  console.log(posts);
 })();
