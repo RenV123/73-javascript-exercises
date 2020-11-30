@@ -10,5 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById('run').addEventListener('click', () => {
+    window.lib.getPosts(displayPostComments);
+  });
+
+  /**
+   * Displays a list of posts in the console.
+   * @param {String} error An error message.
+   * @param {*} posts A list of posts.
+   */
+  const displayPostComments = (error, posts) => {
+    if (error) {
+      console.error(error);
+    } else {
+      posts.forEach((post) => {
+        window.lib.getComments(post.id, (error, comments) => {
+          if (error) {
+            console.error(error);
+          } else {
+            post.comments = comments;
+            console.log(post);
+          }
+        });
+      });
+    }
+  };
 })();

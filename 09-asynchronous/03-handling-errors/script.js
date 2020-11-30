@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById('run').addEventListener('click', () => {
+    window.lib.getPersons(displayPersons);
+  });
+
+  /**
+   * Displays a list of persons in the console.
+   * @param {String} error An error message.
+   * @param {*} posts A list of posts.
+   */
+  const displayPersons = (error, persons) => {
+    if (error) {
+      console.error(error);
+    } else {
+      persons.forEach((person) => {
+        console.log(person);
+      });
+    }
+  };
 })();
