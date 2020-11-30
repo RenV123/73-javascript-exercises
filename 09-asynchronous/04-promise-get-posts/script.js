@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById('run').addEventListener('click', () => {
+    window.lib.getPosts().then(displayPosts);
+  });
+
+  /**
+   * Displays a list of posts in the console.
+   * @param {String} error An error message.
+   * @param {*} posts A list of posts.
+   */
+  const displayPosts = (posts) => {
+    posts.forEach((post) => {
+      console.log(post);
+    });
+  };
 })();
