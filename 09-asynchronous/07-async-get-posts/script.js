@@ -10,6 +10,8 @@
 // You will have time to focus on it later.
 
 (async () => {
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+  // await only works when the function is async (asynchronous)
   let posts = await window.lib.getPosts();
   console.log(posts);
 })();

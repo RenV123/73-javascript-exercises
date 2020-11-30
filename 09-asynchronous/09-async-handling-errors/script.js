@@ -11,6 +11,8 @@
 
 (async () => {
   const displayPersons = async () => {
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+    // Look at promise rejection
     try {
       let persons = await window.lib.getPersons();
       console.log(persons);
