@@ -23,6 +23,7 @@
       response.json().then((hero) => {
         //no easy way to validate object so check props
         if ('name' in hero && 'alterEgo' in hero && 'abilities' in hero) {
+          // Create an element from a template
           var heroElement = template.content.cloneNode(true);
           heroElement.querySelector('.name').innerHTML = hero.name;
           heroElement.querySelector('.alter-ego').innerHTML = hero.alterEgo;
