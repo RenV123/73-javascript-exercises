@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  //
+  document.getElementById('run').addEventListener('click', () => {
+    window.lib.getPosts(displayPosts);
+  });
+  const displayPosts = (error, posts) => {
+    if (error) {
+      console.log(error);
+    } else {
+      posts.forEach((post) => {
+        console.log(post);
+      });
+    }
+  };
 })();
